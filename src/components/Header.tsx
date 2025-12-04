@@ -15,7 +15,6 @@ export const Header = () => {
     { label: "Checklist", href: "#checklist" },
     { label: "Vergunning?", href: "#vergunning" },
     { label: "FAQ", href: "#faq" },
-    { label: "Contact", href: "#contact" },
   ];
 
   const handleNavClick = (href: string, e?: React.MouseEvent) => {
