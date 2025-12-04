@@ -4,7 +4,6 @@ import { Services } from "@/components/Services";
 import { About } from "@/components/About";
 import { FAQ } from "@/components/FAQ";
 import { ROICalculator } from "@/components/ROICalculator";
-import { Contact } from "@/components/Contact";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
@@ -19,7 +18,6 @@ const Index = () => {
       <ROICalculator />
       <About />
       <FAQ />
-      <Contact />
       <Footer />
       <CookieBanner />
     </div>
