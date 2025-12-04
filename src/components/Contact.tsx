@@ -42,7 +42,7 @@ ${formData.message}
             <a href="https://tinyhousevergunningsvrij.nl" target="_blank" rel="noopener noreferrer" className="block">
               <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow cursor-pointer">
                 <CardContent className="p-6">
-                  <div className="flex items-center justify-between">
+                  <div className="items-center justify-between flex flex-col">
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Check de vergunningsvrije ruimte</h4>
                       <p className="text-muted-foreground text-sm">tinyhousevergunningsvrij.nl</p>
