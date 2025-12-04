@@ -1,9 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Home, Users, Briefcase, MapPin, Ruler, Building } from "lucide-react";
-
 export const Services = () => {
-  return (
-    <section id="gids" className="py-24 bg-gradient-subtle relative">
+  return <section id="gids" className="py-24 bg-gradient-subtle relative">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-10 right-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
@@ -13,7 +11,7 @@ export const Services = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section 1: Wat betekent vergunningsvrij */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-8 bg-gradient-to-r from-primary via-primary-glow to-foreground bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-6xl font-extrabold mb-8 bg-gradient-to-r from-primary via-primary-glow to-foreground bg-clip-text text-transparent pb-[5px]">
             Wat betekent vergunningsvrij bouwen?
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
@@ -136,20 +134,10 @@ export const Services = () => {
             De juridische kaders en definities kun je straks uitgediept terugvinden op:
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-4">
-            <a 
-              href="https://tinyhousevergunningsvrij.nl" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg font-medium transition-colors"
-            >
+            <a href="https://tinyhousevergunningsvrij.nl" target="_blank" rel="noopener noreferrer" className="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg font-medium transition-colors">
               → tinyhousevergunningsvrij.nl
             </a>
-            <a 
-              href="https://tinyhousevergunning.nl" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg font-medium transition-colors"
-            >
+            <a href="https://tinyhousevergunning.nl" target="_blank" rel="noopener noreferrer" className="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg font-medium transition-colors">
               → tinyhousevergunning.nl
             </a>
           </div>
@@ -158,6 +146,5 @@ export const Services = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
