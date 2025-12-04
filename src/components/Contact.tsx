@@ -4,7 +4,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, ExternalLink } from "lucide-react";
 import { useState } from "react";
-
 export const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -12,10 +11,8 @@ export const Contact = () => {
     subject: '',
     message: ''
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
     const subject = encodeURIComponent(formData.subject || 'Vraag over vergunningsvrij tiny house bouwen');
     const body = encodeURIComponent(`
 Naam: ${formData.name}
@@ -24,12 +21,9 @@ E-mail: ${formData.email}
 Bericht:
 ${formData.message}
     `);
-    
     window.location.href = `mailto:info@tinyhousevergunningvrijbouwen.nl?subject=${subject}&body=${body}`;
   };
-
-  return (
-    <section id="contact" className="py-24 bg-gradient-to-br from-orange-50 to-orange-100">
+  return <section id="contact" className="py-24 bg-gradient-to-br from-orange-50 to-orange-100">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-foreground bg-clip-text text-transparent">
@@ -45,12 +39,7 @@ ${formData.message}
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-foreground mb-6">Handige links</h3>
             
-            <a 
-              href="https://tinyhousevergunningsvrij.nl" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="block"
-            >
+            <a href="https://tinyhousevergunningsvrij.nl" target="_blank" rel="noopener noreferrer" className="block">
               <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow cursor-pointer">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
@@ -64,12 +53,7 @@ ${formData.message}
               </Card>
             </a>
 
-            <a 
-              href="https://tinyhousevergunning.nl" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="block"
-            >
+            <a href="https://tinyhousevergunning.nl" target="_blank" rel="noopener noreferrer" className="block">
               <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow cursor-pointer">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
@@ -83,12 +67,7 @@ ${formData.message}
               </Card>
             </a>
 
-            <a 
-              href="https://tinyhousefundament.nl" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="block"
-            >
+            <a href="https://tinyhousefundament.nl" target="_blank" rel="noopener noreferrer" className="block">
               <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow cursor-pointer">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
@@ -102,12 +81,7 @@ ${formData.message}
               </Card>
             </a>
 
-            <a 
-              href="https://tinyhousescompleet.nl" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="block"
-            >
+            <a href="https://tinyhousescompleet.nl" target="_blank" rel="noopener noreferrer" className="block">
               <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow cursor-pointer">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
@@ -130,59 +104,8 @@ ${formData.message}
           </div>
 
           {/* Contact Form */}
-          <Card className="border-0 shadow-xl">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-6 text-foreground">Stel je vraag</h3>
-              <form className="space-y-6" onSubmit={handleSubmit}>
-                <div>
-                  <Input 
-                    placeholder="Je naam" 
-                    className="h-12" 
-                    required 
-                    value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
-                  />
-                </div>
-                <div>
-                  <Input 
-                    placeholder="Je e-mailadres" 
-                    type="email" 
-                    className="h-12" 
-                    required 
-                    value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  />
-                </div>
-                <div>
-                  <Input 
-                    placeholder="Onderwerp" 
-                    className="h-12"
-                    value={formData.subject}
-                    onChange={(e) => setFormData({...formData, subject: e.target.value})}
-                  />
-                </div>
-                <div>
-                  <Textarea 
-                    placeholder="Beschrijf je situatie of stel je vraag..." 
-                    className="min-h-32"
-                    required
-                    value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
-                  />
-                </div>
-                <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground h-12 text-lg">
-                  <Mail className="w-5 h-5 mr-2" />
-                  Verstuur bericht
-                </Button>
-              </form>
-              
-              <p className="text-sm text-muted-foreground mt-4 text-center">
-                Dit opent je e-mailprogramma om het bericht te versturen.
-              </p>
-            </CardContent>
-          </Card>
+          
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
