@@ -1,4 +1,3 @@
-import { Linkedin } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 export const Footer = () => {
@@ -12,13 +11,11 @@ export const Footer = () => {
     
     if (href.startsWith('#')) {
       if (isHomePage) {
-        // On home page, scroll to section
         const element = document.querySelector(href);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
       } else {
-        // Not on home page, navigate to home then scroll
         navigate('/');
         setTimeout(() => {
           const element = document.querySelector(href);
@@ -36,84 +33,129 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <img 
-                src="/lovable-uploads/b1b5c69d-d9d7-440f-9f71-fcee64095f94.png" 
-                alt="Mamut" 
-                className="h-8 w-auto brightness-0 invert"
-              />
+              <span className="text-2xl">🏡</span>
+              <span className="font-bold text-lg">Tiny House Vergunningsvrij</span>
             </div>
             <p className="text-gray-300 mb-4">
-              Not an Agency. Not a Staffing Firm. A Build-Operate-Transfer Partner. One Buyout. Permanent Ownership.
+              Praktische gids voor vergunningsvrij tiny house bouwen. Van checklist tot strategie.
             </p>
-            <div className="flex space-x-4">
-              <a 
-                href="https://www.linkedin.com/company/104098834" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Linkedin className="w-5 h-5 text-gray-400 hover:text-[#FF6B35] cursor-pointer transition-colors" />
-              </a>
-            </div>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">What's Included</h4>
+            <h4 className="font-semibold mb-4">Op deze site</h4>
             <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-[#FF6B35] transition-colors">BDR Team</a></li>
-              <li><a href="#" className="hover:text-[#FF6B35] transition-colors">Go-to-Market Engineer</a></li>
-              <li><a href="#" className="hover:text-[#FF6B35] transition-colors">American Copywriter</a></li>
-              <li><a href="#" className="hover:text-[#FF6B35] transition-colors">Tools & Credits</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4">For Startups</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-[#FF6B35] transition-colors">Outbound Framework</a></li>
-              <li><a href="#" className="hover:text-[#FF6B35] transition-colors">Team Integration</a></li>
               <li>
                 <a 
-                  href="#testimonials" 
-                  onClick={(e) => handleNavClick('#testimonials', e)}
-                  className="hover:text-[#FF6B35] transition-colors cursor-pointer"
+                  href="#gids" 
+                  onClick={(e) => handleNavClick('#gids', e)}
+                  className="hover:text-primary transition-colors cursor-pointer"
                 >
-                  Success Stories
+                  Praktische Gids
                 </a>
               </li>
               <li>
                 <a 
-                  href="#roi-calculator" 
-                  onClick={(e) => handleNavClick('#roi-calculator', e)}
-                  className="hover:text-[#FF6B35] transition-colors cursor-pointer"
+                  href="#misverstanden" 
+                  onClick={(e) => handleNavClick('#misverstanden', e)}
+                  className="hover:text-primary transition-colors cursor-pointer"
                 >
-                  ROI Calculator
+                  Veelgemaakte Misverstanden
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#checklist" 
+                  onClick={(e) => handleNavClick('#checklist', e)}
+                  className="hover:text-primary transition-colors cursor-pointer"
+                >
+                  Checklist
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#faq" 
+                  onClick={(e) => handleNavClick('#faq', e)}
+                  className="hover:text-primary transition-colors cursor-pointer"
+                >
+                  Veelgestelde Vragen
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Support</h4>
+            <h4 className="font-semibold mb-4">Ons netwerk</h4>
             <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-[#FF6B35] transition-colors">Getting Started</a></li>
-              <li><a href="/integration-guide" className="hover:text-[#FF6B35] transition-colors">Integration Guide</a></li>
+              <li>
+                <a 
+                  href="https://tinyhousevergunningsvrij.nl" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  tinyhousevergunningsvrij.nl
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://tinyhousevergunning.nl" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  tinyhousevergunning.nl
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://tinyhousefundament.nl" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  tinyhousefundament.nl
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://tinyhousescompleet.nl" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  tinyhousescompleet.nl
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-4">Contact</h4>
+            <ul className="space-y-2 text-gray-300">
               <li>
                 <a 
                   href="#contact" 
                   onClick={(e) => handleNavClick('#contact', e)}
-                  className="hover:text-[#FF6B35] transition-colors cursor-pointer"
+                  className="hover:text-primary transition-colors cursor-pointer"
                 >
-                  Contact Support
+                  Stel een vraag
                 </a>
               </li>
-              <li><a href="/privacy-policy" className="hover:text-[#FF6B35] transition-colors">Privacy Policy</a></li>
+              <li>
+                <a href="/privacy-policy" className="hover:text-primary transition-colors">
+                  Privacybeleid
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-600 pt-8 text-center">
-          <p className="text-gray-400">
-            © {currentYear} Mamut. Build, operate, transfer. Own your revenue motion forever.
+          <p className="text-gray-400 mb-2">
+            © {currentYear} Tiny House Vergunningsvrij Bouwen. Alle rechten voorbehouden.
+          </p>
+          <p className="text-gray-500 text-sm">
+            Let op: Dit is een praktische uitleg, geen officieel juridisch advies. Regels verschillen per gemeente.
           </p>
         </div>
       </div>

@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { AlertTriangle } from "lucide-react";
 
 export const SeriesATimeTrap = () => {
   return (
-    <section id="time-trap" className="py-24 bg-gradient-subtle relative overflow-hidden">
+    <section id="misverstanden" className="py-24 bg-gradient-subtle relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-10 left-20 w-80 h-80 bg-primary/20 rounded-full blur-3xl"></div>
@@ -14,139 +14,93 @@ export const SeriesATimeTrap = () => {
         {/* Section title */}
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-extrabold mb-8 bg-gradient-to-r from-primary via-primary-glow to-foreground bg-clip-text text-transparent">
-            The Series A Kill Zone
+            Veelgemaakte misverstanden
           </h2>
           <p className="text-2xl text-muted-foreground max-w-3xl mx-auto font-medium">
-            You closed $2-5M. Investors demand 3x growth. But hiring takes months and agencies trap you forever.
+            Voordat we naar de checklist gaan, eerst even de grootste valkuilen die je móét kennen.
           </p>
         </div>
 
-        {/* The problem */}
-        <Card className="bg-card/80 backdrop-blur-sm border border-border/50 shadow-soft mb-12 max-w-4xl mx-auto">
-          <CardContent className="p-8">
-            <h3 className="text-2xl font-bold mb-6 text-foreground">The Problem</h3>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <span className="text-primary font-bold text-xl">•</span>
-                <p className="text-lg text-muted-foreground">Inbound maxed out, targets need outbound</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {/* Misverstand 1 */}
+          <Card className="bg-card/80 backdrop-blur-sm border border-destructive/30 shadow-soft">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <AlertTriangle className="w-6 h-6 text-destructive" />
+                <h3 className="text-xl font-bold text-foreground">Misverstand 1</h3>
               </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-primary font-bold text-xl">•</span>
-                <p className="text-lg text-muted-foreground">VP Sales hiring takes months</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-primary font-bold text-xl">•</span>
-                <p className="text-lg text-muted-foreground">Every month waiting burns runway with zero pipeline</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-primary font-bold text-xl">•</span>
-                <p className="text-lg text-muted-foreground">Agencies hold your pipeline hostage—if they go under, you go under</p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+              <p className="text-lg font-bold text-destructive mb-4">"Als het klein is, mag het altijd"</p>
+              <p className="text-muted-foreground">
+                Nee. Een klein gebouw op de verkeerde plek (voortuin, buiten het bebouwingsvlak, verkeerde bestemming) kan alsnog problemen opleveren.
+              </p>
+            </CardContent>
+          </Card>
 
-        {/* The gap callout */}
-        <div className="bg-gradient-primary text-primary-foreground rounded-3xl p-8 mb-16 max-w-4xl mx-auto shadow-elegant text-center">
-          <p className="text-2xl font-bold leading-relaxed">
-            Agencies trap you with endless fees. Building internally takes 10+ months. We build you to ownership.
-          </p>
-        </div>
-
-        {/* Timeline comparison table */}
-        <div className="max-w-6xl mx-auto mb-12">
-          <Card className="bg-card/80 backdrop-blur-sm border border-border/50 shadow-soft overflow-hidden">
-            <CardContent className="p-0">
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b-2 border-border">
-                      <th className="py-4 px-6 text-left text-sm font-bold text-muted-foreground bg-muted/30">Timeline</th>
-                      <th className="py-4 px-6 text-left text-sm font-bold text-muted-foreground bg-muted/30">Build Internally</th>
-                      <th className="py-4 px-6 text-left text-sm font-bold text-primary bg-primary/5">Launch with Mamut</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="border-b border-border/50">
-                      <td className="py-4 px-6 font-semibold text-foreground whitespace-nowrap">Week 1</td>
-                      <td className="py-4 px-6 text-muted-foreground">
-                        <p className="text-sm mb-1">Posting job descriptions</p>
-                        <p className="text-xs text-destructive font-semibold">No outbound activity</p>
-                      </td>
-                      <td className="py-4 px-6 bg-primary/5">
-                        <p className="text-sm font-semibold text-foreground mb-1">Diagnosis, infrastructure, go live in 5 days</p>
-                        <p className="text-xs text-primary font-bold">Pipeline generation starts immediately</p>
-                      </td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="py-4 px-6 font-semibold text-foreground whitespace-nowrap">Early Months</td>
-                      <td className="py-4 px-6 text-muted-foreground">
-                        <p className="text-sm mb-1">Recruiting VP Sales, slow BDR hiring, infrastructure buildout</p>
-                        <p className="text-xs text-destructive font-semibold">Limited outbound, runway burning</p>
-                      </td>
-                      <td className="py-4 px-6 bg-primary/5">
-                        <p className="text-sm font-semibold text-foreground mb-1">Daily meetings, continuous optimization, playbook development</p>
-                        <p className="text-xs text-primary">VP Sales recruiting happens in parallel</p>
-                      </td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="py-4 px-6 font-semibold text-foreground whitespace-nowrap">Transfer Point</td>
-                      <td className="py-4 px-6 text-muted-foreground">
-                        <p className="text-sm mb-1">VP hired, onboarding complete, building from scratch</p>
-                        <p className="text-xs text-muted-foreground/70">Still ramping pipeline</p>
-                      </td>
-                      <td className="py-4 px-6 bg-primary/5">
-                        <p className="text-sm font-semibold text-foreground mb-1">Complete ownership transferred</p>
-                        <p className="text-xs text-primary font-bold">Zero ongoing Mamut fees forever</p>
-                      </td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="py-4 px-6 font-semibold text-foreground whitespace-nowrap">Post-Transfer</td>
-                      <td className="py-4 px-6 text-muted-foreground">
-                        <p className="text-sm mb-1">VP experimenting, testing, iterating</p>
-                        <p className="text-xs text-muted-foreground/70">Slow pipeline growth</p>
-                      </td>
-                      <td className="py-4 px-6 bg-primary/5">
-                        <p className="text-sm font-semibold text-foreground mb-1">VP Sales inherits proven machine</p>
-                        <p className="text-xs text-primary">Data, trained team, validated playbook</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="py-4 px-6 font-semibold text-foreground whitespace-nowrap">Long-Term</td>
-                      <td className="py-4 px-6 text-muted-foreground">
-                        <p className="text-sm mb-1">Full pipeline running</p>
-                        <p className="text-xs text-destructive font-semibold">Long wait to full operation</p>
-                      </td>
-                      <td className="py-4 px-6 bg-primary/5">
-                        <p className="text-sm font-semibold text-foreground mb-1">VP scaling proven motion immediately</p>
-                        <p className="text-xs text-primary font-bold">You own everything permanently</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+          {/* Misverstand 2 */}
+          <Card className="bg-card/80 backdrop-blur-sm border border-destructive/30 shadow-soft">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <AlertTriangle className="w-6 h-6 text-destructive" />
+                <h3 className="text-xl font-bold text-foreground">Misverstand 2</h3>
               </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 border-t-2 border-border">
-                <div className="p-6 bg-destructive/10 border-r border-border/50">
-                  <p className="text-destructive font-bold text-center text-sm">Long delay to full operation, VP builds from blank slate</p>
-                </div>
-                <div className="p-6 bg-primary/10">
-                  <p className="text-primary font-bold text-center text-sm">Pipeline in week 2, VP inherits proven machine at transfer</p>
-                </div>
+              <p className="text-lg font-bold text-destructive mb-4">"Zonder vergunning = zonder regels"</p>
+              <p className="text-muted-foreground mb-4">
+                Ook vergunningsvrije bouwwerken moeten voldoen aan:
+              </p>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>• Veiligheid</li>
+                <li>• Bouwkundige eisen (afhankelijk van gebruik)</li>
+                <li>• Burenrecht (bijv. geen ramen direct in erfgrens)</li>
+                <li>• Regels uit het omgevingsplan</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          {/* Misverstand 3 */}
+          <Card className="bg-card/80 backdrop-blur-sm border border-destructive/30 shadow-soft">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <AlertTriangle className="w-6 h-6 text-destructive" />
+                <h3 className="text-xl font-bold text-foreground">Misverstand 3</h3>
+              </div>
+              <p className="text-lg font-bold text-destructive mb-4">"De gemeente zei aan de telefoon dat het wel mocht"</p>
+              <p className="text-muted-foreground mb-4">
+                Een kort telefoongesprek is geen juridische garantie. Ambtenaren denken vaak mee, maar een mondelinge indicatie beschermt je niet als er later handhaving volgt.
+              </p>
+              <div className="bg-primary/10 rounded-lg p-4 mt-4">
+                <p className="text-sm font-medium text-foreground">
+                  <strong>Tip:</strong> Vraag om een bevestiging per mail, of verwijs in je eigen mail naar het gesprek en vraag of ze dat willen bevestigen.
+                </p>
               </div>
             </CardContent>
           </Card>
-        </div>
 
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <Button 
-            size="lg" 
-            className="bg-gradient-primary text-primary-foreground text-xl px-12 py-8 rounded-2xl shadow-elegant hover:shadow-glow transition-all duration-300 font-bold"
-            onClick={() => window.open('https://calendly.com/bruno-leadmamut/30min', '_blank')}
-          >
-            Escape the Time Trap
-          </Button>
+          {/* Misverstand 4 */}
+          <Card className="bg-card/80 backdrop-blur-sm border border-destructive/30 shadow-soft">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <AlertTriangle className="w-6 h-6 text-destructive" />
+                <h3 className="text-xl font-bold text-foreground">Misverstand 4</h3>
+              </div>
+              <p className="text-lg font-bold text-destructive mb-4">"Ik zet er gewoon geen keuken in, dan is het geen woning"</p>
+              <p className="text-muted-foreground mb-4">
+                Veel mensen proberen hun tiny house te labelen als "tuinhuis" of "kantoor", maar gebruiken het in de praktijk als woning.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                Gemeenten kijken niet alleen naar je tekening, maar ook naar:
+              </p>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>• Hoe het bouwwerk feitelijk wordt gebruikt</li>
+                <li>• Of er sprake is van permanente bewoning</li>
+                <li>• Of de situatie past bij het omgevingsplan</li>
+              </ul>
+              <div className="bg-destructive/10 rounded-lg p-4 mt-4 border border-destructive/20">
+                <p className="text-sm font-medium text-destructive">
+                  Schijnconstructies kunnen later voor flinke problemen zorgen.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

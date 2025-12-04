@@ -3,44 +3,44 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export const FAQ = () => {
   const faqs = [
     {
-      question: "What do I get at ownership transfer?",
-      answer: "Complete ownership of the process (forever license), all documentation, CRM workflows, sequences, templates, dashboards, training materials, and transition support. Mamut has zero claim after transfer."
+      question: "Wat betekent vergunningsvrij tiny house bouwen precies?",
+      answer: "Vergunningsvrij bouwen betekent dat je geen omgevingsvergunning voor bouwen hoeft aan te vragen. Je moet wél voldoen aan specifieke voorwaarden zoals plaats (achtererfgebied), afmetingen, hoogte en gebruik. Je blijft ook gebonden aan andere regels zoals veiligheid, burenrecht en het bestemmingsplan."
     },
     {
-      question: "What if I don't want to transfer ownership?",
-      answer: "You keep all data and learnings with no fees. You can also continue month-to-month or negotiate different terms. But after running together, most transfer—the process works."
+      question: "Kan elk tiny house vergunningsvrij worden gebouwd?",
+      answer: "Nee, niet elk tiny house kan vergunningsvrij worden gebouwd. Een volwaardige nieuwe woning bouwen is zelden vergunningsvrij. Vergunningsvrij gaat vaak over bijbehorende bouwwerken zoals bijgebouwen, tuinkantoren of uitbreidingen die ondergeschikt zijn aan de hoofdwoning."
     },
     {
-      question: "What if my VP Sales isn't hired yet?",
-      answer: "Transfer when ready (VP inherits when they arrive), extend the implementation, or use optional support. Most common: transfer when VP arrives."
+      question: "Wat is het achtererfgebied?",
+      answer: "Het achtererfgebied is het deel van je erf dat achter de voorgevelrooilijn van je woning ligt. Dit is belangrijk omdat vergunningsvrije bijgebouwen meestal alleen in het achtererfgebied mogen worden geplaatst, niet in de voortuin of aan de straatzijde."
     },
     {
-      question: "How do I scale after buyout?",
-      answer: "You own the process—scale however you want. Use the playbooks to train new BDRs. Optional $2,490/month support available but not required."
+      question: "Hoeveel m² mag ik vergunningsvrij bouwen?",
+      answer: "Dit hangt af van de grootte van je erf en hoeveel je al hebt bebouwd. Er zijn maximale bebouwingspercentages en oppervlaktes die verschillen per situatie. Het is belangrijk om dit écht uit te rekenen en niet 'op het oog' te schatten. Check altijd de specifieke regels in jouw gemeente."
     },
     {
-      question: "Won't this conflict with my VP Sales hire?",
-      answer: "Opposite. Your VP inherits a working playbook, real data, and trained team. They skip the build phase and start scaling immediately."
+      question: "Mag ik een tiny house als woning gebruiken zonder vergunning?",
+      answer: "Gemeenten kijken niet alleen naar je tekening, maar ook naar hoe het bouwwerk feitelijk wordt gebruikt. Als je een tiny house labelt als 'tuinhuis' maar het gebruikt als woning, kan dit voor problemen zorgen. Het gebruik moet passen bij de bestemming van de grond en de status als bijgebouw."
     },
     {
-      question: "I'm behind on Series A targets. Can you help?",
-      answer: "Yes. We launch in <1 week. Outbound running by next Tuesday, pipeline data for investors by next month. Build to permanent ownership."
+      question: "Wat als de gemeente telefonisch zegt dat het mag?",
+      answer: "Een telefoongesprek is geen juridische garantie. Vraag altijd om een bevestiging per mail, of stuur zelf een mail waarin je het gesprek samenvat en vraag of ze dat willen bevestigen. Zo heb je iets schriftelijks voor het geval er later vragen komen."
     },
     {
-      question: "How do you launch in <1 week?",
-      answer: "Standardized infrastructure. Pre-trained team. Proven template customized to your ICP. No hiring delays or ramp-up period."
+      question: "Wanneer is het slimmer om toch een vergunning aan te vragen?",
+      answer: "Een vergunning kan slimmer zijn wanneer je: aan de rand van de vergunningsvrije ruimte zit, een extra woning voor de lange termijn wilt, zekerheid nodig hebt richting hypotheek/verzekering/verkoop, of in een buurt woont waar buren snel klagen."
     },
     {
-      question: "Are you an agency?",
-      answer: "No. Agencies rent you labor forever and keep your pipeline hostage. Mamut builds your outbound machine with you, then you own it permanently. If agencies fail, you fail. If we transfer ownership, you're bulletproof."
+      question: "Wat zijn de risico's van vergunningsvrij bouwen?",
+      answer: "Als je niet aan alle voorwaarden voldoet, kan de gemeente handhavend optreden. Dit kan betekenen dat je moet aanpassen, slopen of alsnog een vergunning moet aanvragen. Daarom is het zo belangrijk om vooraf goed te checken of je écht binnen de regels valt."
     },
     {
-      question: "Do we need to buy tools?",
-      answer: "No. Dialer, enrichment, email infrastructure, LinkedIn execution, and revenue dashboard all included."
+      question: "Moet ik de gemeente informeren over mijn bouwplan?",
+      answer: "Formeel niet bij vergunningsvrij bouwen, maar het is wel slim. Leg je plan in grote lijnen voor aan de gemeente (bij voorkeur per mail), vraag of zij het zien als iets dat binnen de vergunningsvrije regels valt, en bewaar hun reactie. Zo voorkom je verrassingen achteraf."
     },
     {
-      question: "How do you measure success?",
-      answer: "Pipeline added, coverage vs target, connect→meeting rate, show rate, stage conversion, and won revenue."
+      question: "Waar vind ik meer informatie over de specifieke regels?",
+      answer: "Voor juridische kaders en definities kun je terecht op tinyhousevergunningsvrij.nl. Voor informatie over het vergunningenproces: tinyhousevergunning.nl. Voor funderingsopties: tinyhousefundament.nl. En voor een compleet overzicht van droom tot oplevering: tinyhousescompleet.nl."
     }
   ];
 
@@ -55,7 +55,7 @@ export const FAQ = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-extrabold mb-8 bg-gradient-to-r from-primary via-primary-glow to-foreground bg-clip-text text-transparent">
-            FAQ
+            Veelgestelde Vragen
           </h2>
         </div>
 
@@ -79,11 +79,17 @@ export const FAQ = () => {
         </div>
 
         <div className="text-center mt-12">
+          <p className="text-lg text-muted-foreground mb-4">
+            Nog vragen? Neem gerust contact met ons op.
+          </p>
           <button 
             className="text-lg text-primary hover:text-primary-glow transition-colors duration-300 font-medium underline decoration-primary/30 hover:decoration-primary-glow"
-            onClick={() => window.open('https://calendly.com/bruno-leadmamut/30min', '_blank')}
+            onClick={() => {
+              const element = document.querySelector('#contact');
+              if (element) element.scrollIntoView({ behavior: 'smooth' });
+            }}
           >
-            Book a call to discuss your path to ownership
+            Ga naar contactformulier
           </button>
         </div>
       </div>

@@ -10,11 +10,11 @@ export const Header = () => {
   const isHomePage = location.pathname === '/';
 
   const menuItems = [
-    { label: "How It Works", href: "#services" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "About", href: "#about" },
+    { label: "Praktische Gids", href: "#gids" },
+    { label: "Misverstanden", href: "#misverstanden" },
+    { label: "Checklist", href: "#checklist" },
+    { label: "Vergunning?", href: "#vergunning" },
     { label: "FAQ", href: "#faq" },
-    { label: "Blog", href: "/blog" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -23,13 +23,11 @@ export const Header = () => {
     
     if (href.startsWith('#')) {
       if (isHomePage) {
-        // On home page, scroll to section
         const element = document.querySelector(href);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
       } else {
-        // Not on home page, navigate to home then scroll
         navigate('/');
         setTimeout(() => {
           const element = document.querySelector(href);
@@ -44,17 +42,16 @@ export const Header = () => {
 
   return (
     <>
-      {/* Urgency Banner */}
+      {/* Info Banner */}
       <div className="bg-gradient-to-r from-primary to-primary-glow text-primary-foreground py-3 text-center relative">
         <p className="text-sm md:text-base font-medium">
-          Series A founders: Stop burning runway waiting to hire. Launch outbound in &lt;1 week →{' '}
+          Vergunningsvrij bouwen? Check eerst de voorwaarden →{' '}
           <a 
-            href="https://calendly.com/bruno-leadmamut/30min" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="underline font-bold hover:text-background transition-colors"
+            href="#checklist" 
+            onClick={(e) => handleNavClick('#checklist', e)}
+            className="underline font-bold hover:text-background transition-colors cursor-pointer"
           >
-            Book Now
+            Bekijk Checklist
           </a>
         </p>
       </div>
@@ -63,12 +60,9 @@ export const Header = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <Link to="/">
-                <img 
-                  src="/lovable-uploads/b1b5c69d-d9d7-440f-9f71-fcee64095f94.png" 
-                  alt="Mamut" 
-                  className="h-10 w-auto cursor-pointer"
-                />
+              <Link to="/" className="flex items-center space-x-2">
+                <span className="text-2xl">🏡</span>
+                <span className="font-bold text-foreground text-lg hidden sm:block">Tiny House Vergunningsvrij</span>
               </Link>
             </div>
             
@@ -96,13 +90,13 @@ export const Header = () => {
               ))}
             </nav>
 
-            {/* Desktop Buttons */}
+            {/* Desktop Button */}
             <div className="hidden lg:flex items-center space-x-4">
               <Button 
                 className="bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300"
-                onClick={() => window.open('https://calendly.com/bruno-leadmamut/30min', '_blank')}
+                onClick={() => handleNavClick('#checklist')}
               >
-                Install Outbound
+                Naar Checklist
               </Button>
             </div>
 
@@ -143,11 +137,11 @@ export const Header = () => {
                 <Button 
                   className="bg-gradient-primary text-primary-foreground w-full"
                   onClick={() => {
-                    window.open('https://calendly.com/bruno-leadmamut/30min', '_blank');
+                    handleNavClick('#checklist');
                     setIsMenuOpen(false);
                   }}
                 >
-                  Install Outbound
+                  Naar Checklist
                 </Button>
               </div>
             </nav>
