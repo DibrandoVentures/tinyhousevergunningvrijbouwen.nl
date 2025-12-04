@@ -1,9 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, FileText, Scale, Home, Compass } from "lucide-react";
-
 export const About = () => {
-  return (
-    <section id="vergunning" className="py-24 bg-gradient-hero relative overflow-hidden">
+  return <section id="vergunning" className="py-24 bg-gradient-hero relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
@@ -76,12 +74,7 @@ export const About = () => {
           <p className="text-lg text-muted-foreground mb-4">
             Wil je snappen hoe een echte vergunning werkt, wat er wordt getoetst en hoe je dat aanpakt?
           </p>
-          <a 
-            href="https://tinyhousevergunning.nl" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-block bg-gradient-primary text-primary-foreground px-8 py-4 rounded-xl font-bold shadow-elegant hover:shadow-glow transition-all duration-300"
-          >
+          <a href="https://tinyhousevergunning.nl" target="_blank" rel="noopener noreferrer" className="inline-block bg-gradient-primary text-primary-foreground px-8 py-4 rounded-xl font-bold shadow-elegant hover:shadow-glow transition-all duration-300">
             → tinyhousevergunning.nl is jouw logische vervolgstap
           </a>
         </div>
@@ -140,9 +133,7 @@ export const About = () => {
 
         {/* Network of sites */}
         <div className="max-w-5xl mx-auto">
-          <h3 className="text-3xl font-bold mb-8 text-center text-foreground">
-            Ons microsite-netwerk
-          </h3>
+          
           <p className="text-lg text-muted-foreground text-center mb-8">
             Om bezoekers echt verder te helpen, krijgt elke site een eigen rol:
           </p>
@@ -203,6 +194,5 @@ export const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
